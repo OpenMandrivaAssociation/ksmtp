@@ -2,4 +2,4 @@ removed_sources:
   ksmtp-17.12.1.tar.xz: f9bd49c92759e511f5a45a69c9b474f9002db87f
 sources:
   kmailtransport-17.08.1.tar.xz: a22a42eeabc3a2ce040d6bddcb83830cabfba185
-  ksmtp-19.04.1.tar.xz: 154f08059d12dd7f4655a295bb93b8f9bed2097b
+  ksmtp-19.04.2.tar.xz: 65cd0ff8be7663f4c2414802ac082f04bf238d5c
