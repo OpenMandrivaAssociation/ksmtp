@@ -3,7 +3,7 @@
 %define devname %mklibname kpimsmtp -d
 
 Name: ksmtp
-Version:	19.04.3
+Version:	19.07.80
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -75,7 +75,7 @@ Development files (Headers etc.) for %{name}.
 %find_lang %{name} --all-name --with-html
 
 %files -f %{name}.lang
-%{_sysconfdir}/xdg/ksmtp.categories
+%{_datadir}/qlogging-categories5/ksmtp.categories
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
