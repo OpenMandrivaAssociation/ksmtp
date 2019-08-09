@@ -3,7 +3,7 @@
 %define devname %mklibname kpimsmtp -d
 
 Name: ksmtp
-Version:	19.07.90
+Version:	19.08.0
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
