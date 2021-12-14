@@ -38,6 +38,9 @@ BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Test)
 BuildRequires: boost-devel
 BuildRequires: sasl-devel
+# For QCH format docs
+BuildRequires: doxygen
+BuildRequires: qt5-assistant
 Requires: akonadi-contacts
 Conflicts: kdepimlibs4-core < 4.14.10-6
 Conflicts: kio-smtp < 3:16.04.3-2
