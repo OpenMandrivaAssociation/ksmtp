@@ -1,6 +1,6 @@
 %define major 6
-%define libname %mklibname kpimsmtp %{major}
-%define devname %mklibname kpimsmtp -d
+%define libname %mklibname KPim6SMTP
+%define devname %mklibname KPim6SMTP -d
 
 Name: plasma6-ksmtp
 Version:	24.01.80
@@ -20,13 +20,13 @@ BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF6KCMUtils)
 BuildRequires: cmake(KPim6Akonadi)
 BuildRequires: cmake(KPim6AkonadiMime)
+BuildRequires: cmake(KPim6Mime)
 BuildRequires: cmake(KF6Completion)
 BuildRequires: cmake(KF6Config)
 BuildRequires: cmake(KF6ConfigWidgets)
 BuildRequires: cmake(KF6CoreAddons)
 BuildRequires: cmake(KF6I18n)
 BuildRequires: cmake(KF6KIO)
-BuildRequires: cmake(KPim6Mime)
 BuildRequires: cmake(KF6Wallet)
 BuildRequires: cmake(KF6WidgetsAddons)
 BuildRequires: cmake(Qt6)
