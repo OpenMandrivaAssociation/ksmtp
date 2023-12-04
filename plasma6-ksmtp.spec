@@ -10,7 +10,7 @@ Version:	24.01.80
 %else
 %define ftpdir stable
 %endif
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{ftpdir}/release-service/%{version}/src/ksmtp-%{version}.tar.xz
 Summary: KDE library for SMTP mail transmission
 URL: http://kde.org/
@@ -41,7 +41,7 @@ BuildRequires: sasl-devel
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
-Requires: akonadi-contacts
+Requires: plasma6-akonadi-contacts
 
 %description
 KDE library for SMTP mail transmission.
