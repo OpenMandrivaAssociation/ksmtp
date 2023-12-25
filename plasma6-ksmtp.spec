@@ -3,14 +3,14 @@
 %define devname %mklibname KPim6SMTP -d
 
 Name: plasma6-ksmtp
-Version:	24.01.80
+Version:	24.01.85
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
 %else
 %define ftpdir stable
 %endif
-Release:	2
+Release:	1
 Source0: http://download.kde.org/%{ftpdir}/release-service/%{version}/src/ksmtp-%{version}.tar.xz
 Summary: KDE library for SMTP mail transmission
 URL: http://kde.org/
