@@ -20,7 +20,7 @@ Source0:	https://invent.kde.org/pim/ksmtp/-/archive/%{gitbranch}/ksmtp-%{gitbran
 Source0: http://download.kde.org/%{ftpdir}/release-service/%{version}/src/ksmtp-%{version}.tar.xz
 %endif
 Summary: KDE library for SMTP mail transmission
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: Graphical desktop/KDE
 BuildRequires: cmake(ECM)
