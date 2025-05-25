@@ -6,7 +6,7 @@
 %define devname %mklibname KPim6SMTP -d
 
 Name: plasma6-ksmtp
-Version:	25.04.0
+Version:	25.04.1
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -49,6 +49,11 @@ BuildRequires: sasl-devel
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
 Requires: plasma6-akonadi-contacts
+# Renamed after 6.0 2025-05-25
+%rename plasma6-ksmtp
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 KDE library for SMTP mail transmission.
@@ -57,6 +62,8 @@ KDE library for SMTP mail transmission.
 Summary: KDE library for SMTP mail transmission
 Group: System/Libraries
 Requires: %{name} = %{EVRD}
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes: %{mklibname kpimsmtp 5}
 
 %description -n %{libname}
 KDE library for SMTP mail transmission.
@@ -65,22 +72,11 @@ KDE library for SMTP mail transmission.
 Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes: %{mklibname -d kpimsmtp}
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
-
-%prep
-%autosetup -p1 -n ksmtp-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang %{name} --all-name --with-html
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/ksmtp.categories
