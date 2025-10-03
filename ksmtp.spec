@@ -5,7 +5,7 @@
 %define libname %mklibname KPim6SMTP
 %define devname %mklibname KPim6SMTP -d
 
-Name: plasma6-ksmtp
+Name: ksmtp
 Version:	25.08.1
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
@@ -48,7 +48,7 @@ BuildRequires: sasl-devel
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
-Requires: plasma6-akonadi-contacts
+Requires: akonadi-contacts
 # Renamed after 6.0 2025-05-25
 %rename plasma6-ksmtp
 
